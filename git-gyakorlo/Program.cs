@@ -26,9 +26,12 @@ namespace git_gyakorlo
 			{
 				Console.Write("Adjon egy számot a listához: ");
 				bekert = int.Parse(Console.ReadLine());
-                Console.WriteLine(bekert);
-                szamok.Add(bekert);
-
+				Console.WriteLine(bekert);
+				if(bekert != 0)
+				{
+				szamok.Add(bekert);
+				}
+				
 			}
 
 			//3.feladat:
@@ -37,6 +40,18 @@ namespace git_gyakorlo
 				Console.Write(szamok[i] + ", ");
             }
 
+			//4.feladat:
+			int min = int.MaxValue;
+
+			for (int i = 0; i < szamok.Count; i++)
+			{
+				if (szamok[i] < min)
+				{
+					min = szamok[i];
+				}
+			}
+
+            Console.WriteLine($"A listában a minimum szám a(z): {min}");
 
 
 
@@ -44,8 +59,7 @@ namespace git_gyakorlo
 
 
 
-
-			Console.ReadKey();
+            Console.ReadKey();
 		}
 	}
 }
