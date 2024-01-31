@@ -10,6 +10,7 @@ namespace git_gyakorlo
 	{
 		static void Main(string[] args)
 		{
+			//Létrehozva
 		}
 	}
 }
